@@ -1,0 +1,145 @@
+Write a “person” class to hold all the details.
+------------------------------------------------------------
+class Person {
+  
+  constructor(name,position,age,phone,address){
+    this.name = name;
+    this.position = position;
+    this.age = age;
+    this.phone = phone;
+    this.address = address;
+  }
+ 
+}
+
+var p = new Person("Jai","Developer","27","9150785458","Chennai");
+
+console.log("Name :"+`${p.name}`+"\n"+"Position :"+`${p.position}`+"\n"+ 
+"Age :"+`${p.age}`+"\n"+"Phone :"+`${p.phone}`+"\n"+"Address :"+`${p.address}`);
+
+
+write a class to calculate the uber price.
+------------------------------------------------------
+ 
+let baseFee = 45;
+let locat= ["Anna Nagar", "OMR", "TNagar", ];
+let uberRates = [50, 100, 150];
+
+
+let customerName = "Jai" ;
+let drop= "OMR" ;
+
+
+function getRate(drop) {
+
+  function uberRate(drop, index) {
+
+    let finalRate = (uberRates[index]) * baseFee;
+    return finalRate;
+  }
+
+  console.log("Hello"+customerName+", "+drop, "rate is:", uberRate(drop, locat.indexOf(drop)));
+}
+
+getRate(drop);
+
+
+The class Movie is stated below.An instance of class Movie represents a film.This class has the following three properties:
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+class Movie {
+  
+  constructor(title,studio,rating){
+    this.title=title;
+    this.studio=studio;
+    this.rating=rating;
+  }
+   
+}
+
+var m = new Movie("Casino Royale","Eon Productions","PG-13");
+
+console.log("Title : "+m.title+"\n"+"Studio : "+m.studio+"\n"+"Rating : "+m.rating);
+
+-----------
+class Movie {
+  
+  constructor(title,studio,rating){
+    this.title=title;
+    this.studio=studio;
+    this.rating=rating;
+  }
+  
+  getPG(){
+    
+    return "Movie Rating : " + this.rating;
+  }
+}
+
+var m = new Movie("Casino Royale","Eon Productions","PG-13");
+
+console.log(m.getPG());
+-------------
+class Movie {
+  
+  constructor(title,studio,rating){
+    this.title=title;
+    this.studio=studio;
+    this.rating=rating;
+  }
+  
+  getPG(){
+    
+    return "Movie Rating : " + this.rating;
+  }
+  
+  name(){
+    console.log(`The title of the Movie ${this.title}.`);
+  }
+  
+  where(){
+    console.log(`The studio is ${this.studio}.`);
+  }
+  
+  prod(){
+    console.log(`The rating is ${this.rating}`);
+  }
+}
+
+var m = new Movie("Casino Royale","Eon Productions","PG-13");
+
+console.log(m.getPG());
+
+
+m.name();
+m.where();
+m.prod();
+
+Circle
+======
+class Circle {
+  
+  constructor(radius,color){
+    this.radius=radius;
+    this.color=color;
+  }
+  getcri(){
+    return "Circle Radius : " +`${this.radius}`;
+  }
+  getcolor(){
+    return "Circle Color : " +`${this.color}`;
+  }
+  getarea() {
+    return Math.PI * Math.pow(this.radius, 2);
+  }
+   getperimeter() {
+    return 2 * Math.PI * this.radius;
+  }
+}
+
+var c = new Circle(1.0,"red");
+console.log(c.getcri());
+console.log(c.getcolor());
+console.log(c.getarea());
+console.log(c.getperimeter());
+
